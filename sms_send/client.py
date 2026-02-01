@@ -9,9 +9,9 @@ from typing import Optional
 class SMSClient:
     """Client for sending SMS via the API."""
 
-    DEFAULT_TIMEOUT = 10  # seconds
+    DEFAULT_TIMEOUT = 5  # seconds
 
-    def __init__(self, server_url: str, timeout: Optional[float] = None, max_retries: int = 3, backoff_factor: float = 0.3):
+    def __init__(self, server_url: str, timeout: Optional[float] = None, max_retries: int = 10, backoff_factor: float = 0.3):
         """
         Initialize SMS client.
 
